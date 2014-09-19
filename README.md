@@ -1,7 +1,6 @@
-<b>iContactU iOS App - entirely developer in Swift</b>
+<b>iContactU</b>
 ======================================================
-
-<i>This source code is released for educational and learning purposes.</i>
+<i>iOS App - entirely developer in Swift</i>
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
@@ -24,3 +23,5 @@ It uses CocoaPods and the following libraries:
 - [HexColor](https://github.com/mRs-/HexColors.git) for using colors in Hex format
 
 run <i>pod install</i> from terminal, into the main folder, before building.
+
+<i>This source code is released for educational and learning purposes.</i>
