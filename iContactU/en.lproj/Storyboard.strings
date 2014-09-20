@@ -1,0 +1,48 @@
+
+/* Class = "IBUINavigationItem"; title = "I have to contact"; ObjectID = "0wu-Tb-6n8"; */
+"0wu-Tb-6n8.title" = "I have to contact";
+
+/* Class = "IBUINavigationItem"; title = "Add Item"; ObjectID = "350-A1-jYa"; */
+"350-A1-jYa.title" = "Add Item";
+
+/* Class = "IBUIButton"; normalTitle = "Mail"; ObjectID = "5lg-zW-pvw"; */
+"5lg-zW-pvw.normalTitle" = "Mail";
+
+/* Class = "IBUIButton"; normalTitle = "Text"; ObjectID = "6Hh-Z3-CHr"; */
+"6Hh-Z3-CHr.normalTitle" = "Text";
+
+/* Class = "IBUILabel"; text = "When:"; ObjectID = "CTc-uF-1pG"; */
+"CTc-uF-1pG.text" = "When:";
+
+/* Class = "IBUILabel"; text = "August 3rd"; ObjectID = "EOF-Bd-dXg"; */
+"EOF-Bd-dXg.text" = "August 3rd";
+
+/* Class = "IBUILabel"; text = "Last name"; ObjectID = "Ksp-cb-5l5"; */
+"Ksp-cb-5l5.text" = "Last name";
+
+/* Class = "IBUIButton"; normalTitle = "Call"; ObjectID = "WrB-Zb-icg"; */
+"WrB-Zb-icg.normalTitle" = "Call";
+
+/* Class = "IBUILabel"; text = "Reason:"; ObjectID = "bVL-Ei-ub3"; */
+"bVL-Ei-ub3.text" = "Reason:";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "bg6-K0-jZI"; */
+"bg6-K0-jZI.text" = "Your contact name";
+
+/* Class = "IBUILabel"; text = "John Appleseed"; ObjectID = "cFI-jp-3I3"; */
+"cFI-jp-3I3.text" = "John Appleseed";
+
+/* Class = "IBUILabel"; text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."; ObjectID = "fjl-6E-8yV"; */
+"fjl-6E-8yV.text" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+/* Class = "IBUILabel"; text = "john@apple.com"; ObjectID = "it1-hr-iyL"; */
+"it1-hr-iyL.text" = "john@apple.com";
+
+/* Class = "IBUILabel"; text = "12345 6789"; ObjectID = "oGb-6p-7ie"; */
+"oGb-6p-7ie.text" = "12345 6789";
+
+/* Class = "IBUIButton"; normalTitle = "Select your Contact >"; ObjectID = "sv7-CD-ayW"; */
+"sv7-CD-ayW.normalTitle" = "Select contact in Address Book >";
+
+/* Class = "IBUILabel"; text = "Reminder"; ObjectID = "wjT-9K-9pI"; */
+"wjT-9K-9pI.text" = "Reminder";

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.17" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="contactImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toDoItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDoItem" inverseName="contact" inverseEntity="ToDoItem" syncable="YES"/>
+    </entity>
+    <entity name="ToDoItem" representedClassName="ToDoItem" syncable="YES">
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="toDoItem" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contact" positionX="243" positionY="-90" width="128" height="135"/>
+        <element name="ToDoItem" positionX="-11" positionY="-81" width="128" height="103"/>
+    </elements>
+</model>
