@@ -42,9 +42,10 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
         
         if (selectedContact != nil){
             
+            self.globalIdentifier = "\(NSDate())"
+            
             BreezeStore.saveInBackground{ contextType -> Void in
                 let toDoItem = ToDoItem.createInContextOfType(contextType) as ToDoItem
-                self.globalIdentifier = "\(NSDate())"
                 toDoItem.identifier = self.globalIdentifier
                 toDoItem.dueDate = self.datePickedRounded()
                 toDoItem.note = self.noteTextField.text
@@ -63,12 +64,10 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
     }
     
     func datePickedRounded() -> NSDate{
-        println("prima: \(datePicked)")
+        
         //ROUNDING FOR SECONDS
-        var seconds:NSTimeInterval = round(datePicked.timeIntervalSinceReferenceDate / 60.0)*60.0
-        //
-        var rounded = NSDate(timeIntervalSinceReferenceDate: seconds)
-        println("dopo \(rounded)")
+        let seconds:NSTimeInterval = round(datePicked.timeIntervalSinceReferenceDate / 60.0)*60.0
+        let rounded = NSDate(timeIntervalSinceReferenceDate: seconds)
         
         return rounded
     }
@@ -78,7 +77,9 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
         var reminder = UILocalNotification()
         reminder.timeZone = NSTimeZone.defaultTimeZone()
         
+        println("prima: \(datePicked)")
         reminder.fireDate = datePickedRounded()
+        println("dopo: \(reminder.fireDate!)")
         
         reminder.userInfo = ["ID" : globalIdentifier]
         reminder.applicationIconBadgeNumber = 1
