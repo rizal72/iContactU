@@ -66,7 +66,7 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
     func datePickedRounded() -> NSDate{
         
         //ROUNDING FOR SECONDS
-        let seconds:NSTimeInterval = round(datePicked.timeIntervalSinceReferenceDate / 60.0)*60.0
+        let seconds:NSTimeInterval = floor(datePicked.timeIntervalSinceReferenceDate / 60.0)*60.0
         let rounded = NSDate(timeIntervalSinceReferenceDate: seconds)
         
         return rounded
