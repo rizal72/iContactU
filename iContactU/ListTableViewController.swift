@@ -58,14 +58,16 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
             }
             
         }
+        if(self.refreshControl?.refreshing == true){
+            self.refreshControl?.endRefreshing()
+        }
         
         if (indexPath != nil){
-            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Left)
+            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
             //println("deleting row with animation...")
         }
         
         self.tableView.reloadData()
-        self.refreshControl?.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
