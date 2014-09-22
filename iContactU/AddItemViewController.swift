@@ -54,7 +54,7 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
             
             if(reminderSwitch.on)
             {
-                println("creating reminder...")
+                //println("creating reminder...")
                 createReminder();
             }
             
@@ -77,9 +77,9 @@ class AddItemViewController: UIViewController, ContactSelectionDelegate, UITextF
         var reminder = UILocalNotification()
         reminder.timeZone = NSTimeZone.defaultTimeZone()
         
-        println("prima: \(datePicked)")
+        //println("prima: \(datePicked)")
         reminder.fireDate = datePickedRounded()
-        println("dopo: \(reminder.fireDate!)")
+        //println("dopo: \(reminder.fireDate!)")
         
         reminder.userInfo = ["ID" : globalIdentifier]
         reminder.applicationIconBadgeNumber = 1

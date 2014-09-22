@@ -23,7 +23,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
         refresh.attributedTitle = NSAttributedString(string: NSLocalizedString("Pull to refresh...", comment: "refresh"))
         
         self.refreshControl = refresh
-        self.refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl?.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func viewDidAppear(animated: Bool){
@@ -33,7 +33,11 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
         
     }
     
-    func loadData(){
+    func refreshData(){
+        loadData()
+    }
+    
+    func loadData(indexPath:NSIndexPath? = nil){
         toDoItems.removeAllObjects()
         
         let results:NSArray = ToDoItem.findAll(predicate: nil, sortedBy: "dueDate", ascending: true, contextType: BreezeContextType.Background)
@@ -54,6 +58,12 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
             }
             
         }
+        
+        if (indexPath != nil){
+            self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Left)
+            //println("deleting row with animation...")
+        }
+        
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
@@ -194,7 +204,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
             
             if ((notification.userInfo!["ID"]! as String) == id){
                 
-                println("notification to delete: \(notification)")
+                //println("notification to delete: \(notification)")
                 UIApplication.sharedApplication().cancelLocalNotification(notification)
             }
         }
@@ -216,15 +226,12 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
                 toDoItemToDelete.deleteInContextOfType(BreezeContextType.Background)
                 
                 BreezeStore.saveInBackground({ contextType -> Void in
-                    println("updating...")},
+                    },
                     completion: {error -> Void in
-                        println("saved.")
-                        //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
-                        self.loadData()
+                        //println("saved.")
+                        self.loadData(indexPath: indexPath)
                 })
-                
-                //loadData()
-                //self.tableView.reloadData()
+
             }
             
         } else if editingStyle == .Insert {

@@ -160,7 +160,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
                 if(error != nil){
                     println(error)
                 }else{
-                    println("contact saved!")
+                    //println("contact saved!")
                     self.pop(id)
                 }
         })
