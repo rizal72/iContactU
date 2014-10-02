@@ -113,7 +113,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
         
         let sectionCount = collation.sectionTitles.count //section count is take from sectionTitles and not sectionIndexTitles
         
-        let unsortedSections = NSMutableArray.arrayWithCapacity(sectionCount)
+        let unsortedSections = NSMutableArray(capacity: sectionCount)
         
         //create an array to hold the data for each section
         for i in collation.sectionTitles{
@@ -127,7 +127,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
             unsortedSections.objectAtIndex(index).addObject(object)
         }
         
-        var sections = NSMutableArray.arrayWithCapacity(sectionCount)
+        var sections = NSMutableArray(capacity: sectionCount)
         
         //sort each section
         for section in unsortedSections{

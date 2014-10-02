@@ -51,7 +51,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
                 
                 let contact:Contact = singleToDoItem.contact
                 
-                let dict:NSDictionary = ["identifier":singleToDoItem.identifier,"name":contact.name, "email":contact.email, "phone":contact.phone, "dueDate":singleToDoItem.dueDate, "note":singleToDoItem.note, "profileImage":UIImage(data: contact.contactImage)]
+                let dict:NSDictionary = ["identifier":singleToDoItem.identifier,"name":contact.name, "email":contact.email, "phone":contact.phone, "dueDate":singleToDoItem.dueDate, "note":singleToDoItem.note, "profileImage":UIImage(data: contact.contactImage)!]
                 
                 toDoItems.addObject(dict)
                 
@@ -131,7 +131,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
         
         let phoneNumber = infoDict.objectForKey("phone") as NSString
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "telprompt://\(phoneNumber)"))
+        UIApplication.sharedApplication().openURL(NSURL(string: "telprompt://\(phoneNumber)")!)
         
     }
     
@@ -220,7 +220,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
                 
                 let infoDict:NSDictionary = toDoItems.objectAtIndex(indexPath.row) as NSDictionary
                 let identifier:NSString = infoDict.objectForKey("identifier") as NSString
-                let predicate:NSPredicate = NSPredicate(format: "identifier == '\(identifier)'")
+                let predicate:NSPredicate! = NSPredicate(format: "identifier == '\(identifier)'")
                 let toDoItemToDelete:ToDoItem = ToDoItem.findFirst(attribute: "identifier", value: identifier, contextType: BreezeContextType.Background) as ToDoItem
                 
                 deleteNotification(toDoItemToDelete.identifier)
