@@ -75,7 +75,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
         self.addressBook.filterBlock = {(contact: APContact!) -> Bool in
             
             //CHECK IF CONTACT HAS PHONES
-            var isElegible = contact.phones.count > 0
+            var isElegible = contact.phones.count > 0 && contact.compositeName != nil
             
             //CHECK IF USER IS SEARCHING A CONTACT
             if(countElements(searchString) > 0 && isElegible){
