@@ -48,7 +48,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        //println("SB text did change: \(searchText)")
+        
         loadContacts(searchString: searchText)
     }
     
@@ -59,11 +59,6 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
         loadContacts()
         searchBar.resignFirstResponder()
     }
-    
-    /*func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-    searchBar.resignFirstResponder()
-    loadContacts()
-    }*/
     
     func loadContacts(searchString:String = ""){
         
@@ -111,7 +106,8 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
         
         let collation:UILocalizedIndexedCollation = UILocalizedIndexedCollation.currentCollation() as UILocalizedIndexedCollation
         
-        let sectionCount = collation.sectionTitles.count //section count is take from sectionTitles and not sectionIndexTitles
+        //section count is take from sectionTitles and not sectionIndexTitles
+        let sectionCount = collation.sectionTitles.count
         
         let unsortedSections = NSMutableArray(capacity: sectionCount)
         
@@ -158,7 +154,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
             }
             }, completion:{error -> Void in
                 if(error != nil){
-                    println(error)
+                    //println("\(error?.localizedDescription)")
                 }else{
                     //println("contact saved!")
                     self.pop(id)
