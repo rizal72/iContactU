@@ -154,7 +154,7 @@ class ContactsTableViewController: UITableViewController, UISearchBarDelegate {
             }
             }, completion:{error -> Void in
                 if(error != nil){
-                    //println("\(error?.localizedDescription)")
+                    println("\(error?.localizedDescription)")
                 }else{
                     //println("contact saved!")
                     self.pop(id)

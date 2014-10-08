@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        UINavigationBar.appearance().barTintColor = UIColor(hexString: "ef3c39"/*"34aadc"*/)
+        UINavigationBar.appearance().barTintColor = UIColor(hexString: "ef3c39")
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
@@ -46,7 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //UIApplication.sharedApplication().cancelAllLocalNotifications()
-        println("ALL SCHEDULED NOTIFICATIONS: \(UIApplication.sharedApplication().scheduledLocalNotifications.count)")
+        let notificationsCount = UIApplication.sharedApplication().scheduledLocalNotifications.count
+        println("ALL SCHEDULED NOTIFICATIONS: \(notificationsCount)")
         
         return true
     }
