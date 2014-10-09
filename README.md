@@ -1,9 +1,9 @@
 <b>iContactU</b>
 ======================================================
+<img src="http://riccardosallusti.it/wp-content/uploads/2014/10/Icon-60@3x.png">
+
 <i>iOS App - entirely developer in Swift</i>  
 <b>note:</b> supports Xcode 6.0/Swift 1.0 - For Xcode 6.1/Swift 1.1 version, switch to branch "develop".
-
-<img src="http://riccardosallusti.it/wp-content/uploads/2014/10/Icon-60@3x.png">
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
