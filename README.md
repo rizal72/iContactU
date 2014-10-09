@@ -3,7 +3,7 @@
 <img src="http://riccardosallusti.it/wp-content/uploads/2014/10/Icon-60@3x.png">
 
 <i>iOS App - entirely developed in Swift</i>  
-<b>note:</b>This version supports Xcode 6.1/Swift 1.1 version.
+<b>note:</b> supports Xcode 6.0/Swift 1.0 - For Xcode 6.1/Swift 1.1 version, switch to branch "develop".
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
