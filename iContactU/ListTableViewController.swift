@@ -51,7 +51,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
                 
                 let contact:Contact = singleToDoItem.contact
                 
-                let dict:NSDictionary = ["identifier":singleToDoItem.identifier,"name":contact.name, "email":contact.email, "phone":contact.phone, "dueDate":singleToDoItem.dueDate, "note":singleToDoItem.note, "profileImage":UIImage(data: contact.contactImage)!]
+                let dict:NSDictionary = ["identifier":singleToDoItem.identifier,"name":contact.name, "email":contact.email, "phone":contact.phone, "dueDate":singleToDoItem.dueDate, "note":singleToDoItem.note, "profileImage":UIImage(data: contact.contactImage)]
                 
                 toDoItems.addObject(dict)
                 
@@ -129,9 +129,10 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
     func callSomeOne(sender:UIButton){
         let infoDict:NSDictionary = toDoItems.objectAtIndex(sender.tag) as NSDictionary
         
-        let phoneNumber = infoDict.objectForKey("phone") as NSString
-        
-        UIApplication.sharedApplication().openURL(NSURL(string: "telprompt://\(phoneNumber)")!)
+        var phoneNumber = infoDict.objectForKey("phone") as NSString
+        var phoneNumberStripped = phoneNumber.stringByReplacingOccurrencesOfString("\u{00a0}", withString: "")
+        //println("phoneNumberStripped: \(phoneNumberStripped)")
+        UIApplication.sharedApplication().openURL(NSURL(string: "telprompt://\(phoneNumberStripped)"))
         
     }
     

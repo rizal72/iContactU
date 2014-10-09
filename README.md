@@ -1,6 +1,6 @@
 <b>iContactU</b>
 ======================================================
-<i>iOS App - entirely developer in Swift</i>
+<i>iOS App - entirely developer in Swift - updated to Xcode 6.1/Swift 1.1</i>
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
