@@ -27,7 +27,7 @@ It uses CocoaPods and the following libraries:
 
 run <i>pod install</i> from terminal, into the main folder, before building.
 
-<img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_2-e1412777153111.jpg"><img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_3-e1412777126731.jpg"><img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_4-e1412777091608.jpg">
+<img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_2-e1412777153111.jpg"> <img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_3-e1412777126731.jpg"> <img src="http://riccardosallusti.it/wp-content/uploads/2014/10/iContactU_4-e1412777091608.jpg">
 
 <i>This source code is released for educational and learning purposes.  
 Credits to Brian Advent(https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw) for his wonderful Swift tutorials.</i>
