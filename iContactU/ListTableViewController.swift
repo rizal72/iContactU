@@ -131,7 +131,7 @@ class ListTableViewController: UITableViewController, MFMessageComposeViewContro
         
         var phoneNumber = infoDict.objectForKey("phone") as NSString
         var phoneNumberStripped = phoneNumber.stringByReplacingOccurrencesOfString("\u{00a0}", withString: "")
-        println("phoneNumberStripped: \(phoneNumberStripped)")
+        //println("phoneNumberStripped: \(phoneNumberStripped)")
         UIApplication.sharedApplication().openURL(NSURL(string: "telprompt://\(phoneNumberStripped)")!)
         
     }
