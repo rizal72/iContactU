@@ -1,6 +1,9 @@
 <b>iContactU</b>
 ======================================================
-<i>iOS App - entirely developer in Swift - updated to Xcode 6.1/Swift 1.1</i>
+<img src="http://riccardosallusti.it/wp-content/uploads/2014/10/Icon-60@3x.png">
+
+<i>iOS App - entirely developed in Swift</i>  
+<b>note:</b>This version supports Xcode 6.1/Swift 1.1 version.
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
