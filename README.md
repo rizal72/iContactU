@@ -24,6 +24,5 @@ It uses CocoaPods and the following libraries:
 
 run <i>pod install</i> from terminal, into the main folder, before building.
 
-<i>This source code is released for educational and learning purposes.
-
+<i>This source code is released for educational and learning purposes.  
 Credits to Brian Advent(https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw) for his wonderful Swift tutorials</i>
