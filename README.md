@@ -1,7 +1,7 @@
 <b>iContactU</b>
 ======================================================
-<i>iOS App - entirely developer in Swift - supports Xcode 6.0/Swift 1.0  
-For Xcode 6.1/Swift 1.1 version, switch to branch "develop"</i>
+<i>iOS App - entirely developer in Swift</i>  
+<b>note:</b> supports Xcode 6.0/Swift 1.0. For Xcode 6.1/Swift 1.1 version, switch to branch "develop"
 
 Did you ever forgot to call or contact someone you ought to?
 With <b>iContactU<b/> this will never happen again! 
